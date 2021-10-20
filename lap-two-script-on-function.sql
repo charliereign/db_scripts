@@ -32,10 +32,13 @@ select * from pubs2.titles, extract (year from pubs2.titles.pubdate) as year;
 select * from pubs2.titles, extract (day from pubs2.titles.pubdate) as day;
 
 --What shortcuts does it take in calculating the difference?
-select start _date - end_date
+select start _date - end_date;
 
 --When might it make sense to use TIMESTAMPDIFF()
+--when you have both the start and the end date range
 
+--Using TIMESTAMPDIFF(), get the difference between these dates: '2018-03-02' and '2018-02-01'.
+select '2018-03-02'::timestamp - '2018-02-01'::timestamp as date;
 
 
 
